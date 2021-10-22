@@ -1,0 +1,1245 @@
+
+
+/*
+Line 1,2,3,4,5
+1: Get ticket symbo
+2: set time interval
+3:set output
+4:sset data type
+5: insert your API KEY
+*/
+
+
+
+// ["Time Series (Daily)"]["2021-04-15"]["4. close"]
+// 2021-04-15: 
+// {1. open: "413.7400",
+//  2. high: "416.1600",
+//  3. low: "413.6900",
+//  4. close: "415.8700", 
+//  5. volume: "60229842"}
+
+// ["Meta Data"]
+// 1. Information: "Daily Prices (open, high, low, close) and Volumes"
+// 2. Symbol: "SPY"
+// 3. Last Refreshed: "2021-09-03"
+// 4. Output Size: "Compact"
+// 5. Time Zone: "US/Eastern"
+
+
+
+// let stockapi = fetch(`https://www.alphavantage.co/query?function=${TimeSeries[2]}&outputsize=${outPut[0]}&symbol=${ticket}&interval=${TimesInterval[4]}&apikey=854ZIE26CTNZ5UPX&datatype=${dataType[0]}`)
+// .then(res => res.json)
+// .then(data => console.log(data))
+
+// const getStockInfo = async () => {
+// 	const response = await fetch(`https://www.alphavantage.co/query?function=${TimeSeries[2]}&outputsize=${outPut[0]}&symbol=${ticket}&interval=${TimesInterval[4]}&apikey=854ZIE26CTNZ5UPX&datatype=${dataType[0]}`, {
+// 		headers: {
+// 			Accept: 'application/json',
+// 		}
+// 	});
+
+// 	const json = await response.json();
+
+// 	return json;
+// }
+
+<!-- <p>
+	{#each Object.entries(stockinfo) as [Information, Symbol]}
+	<h1>{Information}.["Information"]</h1>
+	<p>{Symbol}.["Symbol"]</p>
+  {/each}
+ </p> -->
+<!-- <ul>
+	{#each stockinfo as stocksinfos }
+		<li>{stockinfos.low} and {stocksinfos.high}</li>
+	{/each}
+</ul>  -->
+
+<!-- {#each stockinfo as stockz }
+<!-- <p>{stockz.["Information"]}
+	<!-- <JSONTree {stockz.["Symbo"]} />
+</p>	
+{/each} --> 
+
+	// var request = require('request');
+
+	// https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=IBM&apikey=854ZIE26CTNZ5UPX
+
+// var url = 'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=IBM&interval=5min&apikey=854ZIE26CTNZ5UPX';
+
+// request.get({
+//     url: url,
+//     json: true,
+//     headers: {'User-Agent': 'request'}
+//   }, (err, res, data) => {
+//     if (err) {
+//       console.log('Error:', err);
+//     } else if (res.statusCode !== 200) {
+//       console.log('Status:', res.statusCode);
+//     } else {
+//       // data is successfully parsed as a JSON object:
+//       console.log(data);
+//     }
+// });
+
+
+
+	// // console.log(response['Meta Data']);
+	// let meow = response['Meta Data'];
+	//  let dog = response[`Time Series (Daily)`];
+	//  let today = "";
+	//  console.log("Todays Date: ", today = new Date().toISOString().slice(0, 10))
+	// // console.log(meow["1. Information"])
+	// console.log("Information : " , meow["1. Information"])
+	// console.log("Symbol: ", meow["2. Symbol"])
+	// // console.log(meow["2. Symbol"])
+	// console.log("Last Refreshed: ", meow["3. Last Refreshed"])
+	// // console.log("Today Volume: ", dog["2021-05-03"] ["5. volume"])
+	// console.log("Today Volume was less than yesteray : ",  dog["2021-05-03"] ["5. volume"] < dog["2021-05-10"] ["5. volume"] );
+	// // console.log(dog["5. volume"])
+	// console.log("Yesterday Volume: ", dog["2021-05-03"] ["5. volume"])
+	// console.log("Today Volume: ", dog["2021-05-10"] ["5. volume"])
+	// console.log("Today Volume was more than yesterday : ",  dog["2021-05-03"] ["5. volume"] > dog["2021-05-10"] ["5. volume"] );
+	// console.log(meow["4 Output Size"])
+	// console.log(response["Time Series (Daily)"]);
+	// console.log(response["Time Series (Daily)"])
+	// console.log(response[`${event}`]);
+	// response = response["Time Series (Daily)"][`${event}`][`${High_Low[1]}`]
+	// // response = response["Meta Data"]["2. Symbol"]
+	// console.log(response);
+	// return meow;
+
+	//METAL DATA
+/*
+1. Information: 'Daily Prices (open, high, low, close) and Volumes', 2. Symbol: 'ATER', 3. Last Refreshed: '2021-09-22 16:00:01', 4. Output Size: 'Compact', 5. Time Zone: 'US/Eastern'}
+1. Information: "Daily Prices (open, high, low, close) and Volumes"
+2. Symbol: "ATER"
+3. Last Refreshed: "2021-09-22 16:00:01"
+4. Output Size: "Compact"
+*/
+
+	// DAILY PRICE
+/*
+2021-05-03:
+1. open: "22.1100"
+2. high: "22.1900"
+3. low: "20.1700"
+4. close: "20.6600"
+5. volume: "815468"
+
+
+
+	// let toto = {
+	// 	"Meta Data": {
+    //     "1. Information": "Intraday (5min) open, high, low, close prices and volume",
+    //     "2. Symbol": "IBM",
+    //     "3. Last Refreshed": "2021-09-21 19:45:00",
+    //     "4. Interval": "5min",
+    //     "5. Output Size": "Compact",
+    //     "6. Time Zone": "US/Eastern"
+    // },
+    // "Time Series (5min)": {
+    //     "2021-09-21 19:45:00": {
+    //         "1. open": "132.7600",
+    //         "2. high": "132.8300",
+    //         "3. low": "132.7500",
+    //         "4. close": "132.7500",
+    //         "5. volume": "3468"
+    //     }
+	// }};
+
+	// console.log(typeof(toto))
+
+
+	// 2021-04-20
+
+
+
+
+
+// let characterName = [];
+
+// onMount(async () => {
+// 	const response = await fetch('https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=IBM&interval=5min&apikey=854ZIE26CTNZ5UPX');
+// 	const character = await response.json();
+// 	characterName = [character];
+// 	console.log(characterName)
+// });
+
+
+
+
+	// let today = new Date();
+	// let dd = String(today.getDate()).padStart(1, '0');
+	// let mm = String(today.getMonth() + 1).padStart(2, '8'); //January is 0!
+	// let yyyy = today.getFullYear();
+	// console.log(today = mm + '/' + dd + '/' + yyyy);
+
+	/*
+	{Meta Data: {…}, Time Series (5min): {…}}
+Meta Data:
+1. Information: "Intraday (5min) open, high, low, close prices and volume"
+2. Symbol: "IBM"
+3. Last Refreshed: "2021-09-21 19:45:00"
+4. Interval: "5min"
+5. Output Size: "Compact"
+6. Time Zone: "US/Eastern"
+[[Prototype]]: Object
+Time Series (5min): {2021-09-21 19:45:00: {…}, 2021-09-21 19:40:00: {…}, 2021-09-21 19:35:00: {…}, 2021-09-21 19:30:00: {…}, 2021-09-21 19:05:00: {…}, …}
+*/
+
+// / let testing = {
+// 		url: "url = 'https://www.alphavantage.co/query?function=",
+// 		time: "TIME_SERIES_INTRADAY",
+// 		symbol: "symbol=IBM",
+// 		TimeSeries: "interval=5min",
+// 		apikey: "=854ZIE26CTNZ5UPX"
+// 	}
+// 	// 'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=IBM&interval=5min&apikey=854ZIE26CTNZ5UPX'
+
+// 	let testing1 = `${testing.url}${testing.time}&${testing.symbol}&${testing.TimeSeries}&${testing.apikey}`;
+// let toto = {
+// 		"Meta Data": {
+//         "1. Information": "Intraday (5min) open, high, low, close prices and volume",
+//         "2. Symbol": "IBM",
+//         "3. Last Refreshed": "2021-09-21 19:45:00",
+//         "4. Interval": "5min",
+//         "5. Output Size": "Compact",
+//         "6. Time Zone": "US/Eastern"
+//     },
+//     "Time Series (5min)": {
+//         "2021-09-21 19:45:00": {
+//             "1. open": "132.7600",
+//             "2. high": "132.8300",
+//             "3. low": "132.7500",
+//             "4. close": "132.7500",
+//             "5. volume": "3468"
+//         }
+// 	}};
+
+<!doctype html>
+<html lang = "en" >
+<head>
+<meta charset = "utf-8" >
+<meta name = "viewport" content= "width=device-width, initial-scale=1">
+<meta name = "description" content = "Basic Alpha Vantage script with user data entry" >
+<meta name = "keywords" content = "Alpha Vantage,predIQtiv,JavaScript,GitHub" >
+<meta name = "date" content = "2018-01-14" >
+<title>Alpha Vantage Cookbook ~ #2 Get Data Basic Interactive</title>
+<style>
+/* Copyright (c) 2018 predIQtiv. MIT License */
+
+	body { font: 12pt monospace; margin: 0 auto; max-width: 800px; }
+
+	a { color: crimson; text-decoration: none; }
+	a:hover, a:focus { background-color: yellow; color: #aaa; text-decoration: underline }
+
+</style>
+</head>
+<body>
+
+	<h3>
+		<a href="https://github.com/prediqtiv/alpha-vantage-cookbook/blob/master/intro-to-javascript-for-alpha-vantage/02-alpha-vantage-get-data-interactive.html" target="_blank"><img src="https://status.github.com/images/invertocat.png" height=18 title='Octocat' ></a>
+		<a href="" >Alpha Vantage Cookbook ~ #2 Get Data Interactive</a>
+	</h3>
+
+	<p>API key: <input id=inpApiKey value='demo'  onchange=setStorage(); ></p>
+	<p>Symbol: &nbsp;<input id=inpSymbol value='MSFT' ></p>
+	<p><button onclick=getAlphaVantagedata(); >get Alpha Vantage Data</button></p>
+
+	<div id = "divContents" >Data will appear here. This may take a number of seconds. Open the developer console to see more details.</div>
+
+<script>
+// Thanks to http://www.alphavantage.co/
+
+/*
+
+Remember to upate the API key field with your key
+
+Get your key here: https://www.alphavantage.co/support/#api-key
+
+'Demo' API Key works only for exact copies of the demos in the documentation
+
+*/
+
+
+	const url = 'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=MSFT&interval=1min&apikey=demo';
+
+
+	function getAlphaVantagedata() {
+
+		const apiKey = inpApiKey.value;
+
+		const symbol = inpSymbol.value;
+
+		const url = 'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=' + symbol + '&interval=1min&apikey=' + apiKey;
+
+		requestFile( url );
+
+	}
+
+
+	function requestFile( url ) {
+
+		const xhr = new XMLHttpRequest();
+		xhr.open( 'GET', url, true );
+		xhr.onerror = function( xhr ) { console.log( 'error:', xhr  ); };
+		xhr.onprogress = function( xhr ) { console.log( 'bytes loaded:', xhr.loaded  ); }; /// or something
+		xhr.onload = callback;
+		xhr.send( null );
+
+		function callback( xhr ) {
+
+			let response, json, lines;
+
+			response = xhr.target.response;
+			divContents.innerText = response;
+
+			json = JSON.parse( response );
+
+console.log( 'json', json );
+
+		}
+
+	}
+
+
+</script>
+</body>
+</html>
+
+
+<!doctype html>
+<html lang = "en" >
+<head>
+<meta charset = "utf-8" >
+<meta name = "viewport" content= "width=device-width, initial-scale=1">
+<meta name = "description" content = "Basic Alpha Vantage script with user data entry,local storage and save data to file" >
+<meta name = "keywords" content = "Alpha Vantage,predIQtiv,JavaScript,GitHub" >
+<meta name = "date" content = "2018-01-14" >
+<title>Alpha Vantage Cookbook ~ Get Data Selected Parameters</title>
+<style>
+/* Copyright (c) 2018 predIQtiv. MIT License */
+
+	body { font: 12pt monospace; margin: 0 auto; max-width: 800px; }
+
+	a { color: crimson; text-decoration: none; }
+	a:hover, a:focus { background-color: yellow; color: #aaa; text-decoration: underline }
+
+</style>
+</head>
+<body>
+
+	<h3>
+		<a href="https://github.com/prediqtiv/alpha-vantage-cookbook/blob/master/intro-to-javascript-for-alpha-vantage/05-alpha-vantage-get-data-select-parameters.html" target="_blank"><img src="https://status.github.com/images/invertocat.png" height=18 title='Octocat' ></a>
+		<a href="" >Alpha Vantage Cookbook ~ #5 Get Data Select Parameters</a>
+	</h3>
+
+	<p>API key: <input id=inpApiKey onchange=setStorage(); value='demo' ></p>
+
+	<p>Symbol: &nbsp;<input id=inpSymbol value='MSFT' ></p>
+
+	<p>
+
+		function:
+		<select id=selFunction onchange=setInterval();  >
+			<option>TIME_SERIES_INTRADAY</option>
+			<option>TIME_SERIES_DAILY</option>
+			<option>TIME_SERIES_DAILY_ADJUSTED</option>
+			<option>TIME_SERIES_WEEKLY</option>
+			<option>TIME_SERIES_WEEKLY_ADJUSTED</option>
+			<option>TIME_SERIES_MONTHLY</option>
+			<option>TIME_SERIES_MONTHLY_ADJUSTED</option>
+			<option>BATCH_STOCK_QUOTES</option>
+		</select>
+
+		<span id=spnInterval >
+			interval:
+			<select id=selInterval >
+					<option>1min</option>
+					<option>5min</option>
+					<option>15min</option>
+					<option>30min</option>
+					<option>60min</option>
+			</select>
+		</span>
+	</p>
+
+	<p>
+
+		output size:
+		<select id=selSize >
+			<option>compact</option>
+			<option>full</option>
+		</select>
+
+		data type:
+		<select id=selType >
+			<option>json</option>
+			<option>csv</option>
+		</select>
+
+	</p>
+
+	<p>
+		<button onclick=getAlphaVantagedata(); >get Alpha Vantage Data</button>
+		 &nbsp; <button onclick=saveDataToFile(); >Save data to file</button>
+	</p>
+
+	<div id = "divContents" >Data will appear here after you push the button. This may take a number of seconds. Open the developer console to see more details.</div>
+
+<script>
+// Thanks to http://www.alphavantage.co/
+
+	let apiKey;
+
+	let symbol;
+
+
+	init();
+
+
+	function init() {
+
+		apiKey = localStorage.getItem( 'apiKey' );
+
+		inpApiKey.value = apiKey ? apiKey : '' ;
+
+	}
+
+
+
+	function getAlphaVantagedata() {
+
+		const func = selFunction.value; //'function is a reserved word
+		const size = selSize.value;
+		const type = selType.value;
+		const interval = selInterval.value;
+
+		symbol = inpSymbol.value;
+
+		const demo = symbol === 'MSFT' && apiKey === 'demo' ? true : false;
+
+		if ( demo === true ) {
+
+			url = 'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=MSFT&interval=1min&apikey=demo';
+
+		} else {
+
+			url = 'https://www.alphavantage.co/query?function=' + func +
+				'&symbol=' + symbol +
+				'&interval=' + interval +
+				'&outputsize=' + size +
+				'&datatype=' + type +
+				'&apikey=' + apiKey;
+
+		}
+
+		requestFile( url );
+
+	}
+
+
+	function requestFile( url ) {
+
+		const xhr = new XMLHttpRequest();
+		xhr.open( 'GET', url, true );
+		xhr.onerror = function( xhr ) { console.log( 'error:', xhr  ); };
+		xhr.onprogress = function( xhr ) { console.log( 'bytes loaded:', xhr.loaded  ); }; /// or something
+		xhr.onload = callback;
+		xhr.send( null );
+
+		function callback( xhr ) {
+
+			const response = xhr.target.response;
+			divContents.innerText = response;
+
+			if (response.slice( 0, 1) !== '{' ) { return; } // not a json file
+
+			const json = JSON.parse( response );
+
+console.log( 'json', json );
+
+		}
+
+	}
+
+
+
+	function setInterval() {
+
+		spnInterval.style.display = selFunction.value !== 'TIME_SERIES_INTRADAY' ? 'none' : '';
+
+	}
+
+
+
+	function saveDataToFile() {
+
+		const blob = new Blob( [ divContents.innerText ] );
+		let a = document.body.appendChild( document.createElement( 'a' ) );
+		a.href = window.URL.createObjectURL( blob );
+		a.download = symbol + '.txt';
+		a.click();
+		a = null;
+
+	}
+
+
+
+	function setStorage() {
+
+		apiKey = inpApiKey.value;
+		localStorage.setItem('apiKey', apiKey );
+
+	}
+
+
+
+
+
+
+
+		// for( const property in StockInfoEntry){
+		// 	console.log(`Stock Entrys [${property}] = ${StockInfoEntry[property]}`)
+		// }
+		// User [0] = 1. open,602.4900
+		// User [1] = 2. high,620.4100
+		// User [2] = 3. low,586.7650
+		// User [3] = 4. close,589.8900
+		// User [4] = 5. volume,33823646
+
+
+		// StockInfoEntry.map(([prop, val]) => console.log(prop, val))
+
+		// console.log('----')
+		// for(const [prop, val] of StockInfoEntry){
+		// 	console.log(prop, val)
+		// }
+	
+		// console.log('---')
+
+		// console.log([StockInfoValue["1"]])
+		// for(let vall of StockInfoValue){
+		// 	console.log(vall)
+		// }
+// 		for( const property in data){
+// 			console.log(`User [${property}] = ${data[property]}`)
+// 		}
+
+
+// User [Meta Data] = [object Object]
+// User [Time Series (Daily)] = [object Object]
+		
+
+		// StockInfoEntry.forEach((el, i)=> {
+		// 	console.log(el)
+		// });
+		// console.log(StockInfoKeys, StockInfo)
+		// StockInfoKeys.forEach((keys, index)=>{
+		// 	StockInfo.forEach((val, i) => {
+		// 		console.log(`${keys.slice(0, keys.length)}`)
+		// 	})
+		// });
+
+	
+		// console.log(StockInfo)
+		// StockInfoKeys.forEach((seItems, i)=>{
+		// 	// console.log(`${seItems}`)
+		// 	StockInfo.forEach((items, index) => {
+		// 		console.log(`${seItems} ${items}`);
+		// 	})
+		// })
+
+
+		// StockInfo = Object.entries(StockInfo)
+		// StockInfo.forEach((item, index)=> {
+			// let allInfo = item[1];
+			// console.log(allInfo)
+			// console.log( allInfo, index)
+			// console.log(Object.values(item))
+			// console.log(item)
+			// return JSON.parse(item);
+			// console.log(Object.entries(allInfo))
+			// return allInfo;
+			// return Object.values(item)
+			// console.log(`Stock ticket: ${Symbol}, Last Refreshed: ${LastRefreshed}`)
+			// console.log(Object.values(item)[0])
+			//Display the stock 1.open 2.high 3.low 4.close 5. volume
+			// console.log(Math.round(Object.values(item)[1]["1. open"] - Object.values(item)[1]["4. close"]))
+			// console.log(StockInfo)
+		// })
+		// Math.round
+		//Give the information for this day only
+		// StockInfo = Object.entries(StockInfo["2021-09-27"])
+
+		// give the information of the last 100 days
+		// console.log(Object.entries(StockInfo));
+		// console.log(StockInfo.length);
+		// console.log(StockInfo);
+		// for(let props in StockInfo) {
+		// 	console.log(props[])
+		// }
+
+		// for(i = 0; )
+		// let edgarr = Object.values(StockInfo);
+		
+		// edgarr.splice(0 , edgarr, data);
+		// console.log(edgarr)
+		// console.log(Object.keys(StockInfo))
+		// console.log(Object.values(StockInfo));
+
+
+	function getStorage() {
+
+		apiKey = localStorage.getItem( 'apiKey' );
+
+	}
+
+
+</script>
+</body>
+</html>
+
+
+
+	// let test = response.map(meow => {
+	// 	return '<p>Symbol:</p> ' + meow['Meta Data']['2. Symbol']
+	// });
+	// console.log(response)
+	// console.log(test)
+	// response  = response['Meta Data']
+	// console.log(JSON.parse(response))
+	// .then((response) => ([response]))
+	// console.log(response["Meta Data"]["1. Information"])
+	// console.log(response["Meta Data"]["2. Symbol"])
+	// console.log(response["Meta Data"]["3. Last Refreshed"])
+	// console.log(response["Meta Data"]["4. Interval"])
+	// console.log(response["Meta Data"]["5. Output Size"])
+	// console.log(response["Meta Data"]["6. Time Zone"])
+
+	// console.log("--------");
+	// // console.log(response)
+
+	// console.log(response["Time Series (5min)"]["2021-09-21 18:15:00"]["1. open"])
+	// console.log(response["Time Series (5min)"]["2021-09-21 18:40:00"]["2. high"])
+	// console.log(response["Time Series (5min)"]["2021-09-21 18:15:00"]["3. low"])
+	// console.log(response["Time Series (5min)"]["2021-09-21 18:30:00"]["4. close"])
+	// console.log(response["Time Series (5min)"]["2021-09-21 18:25:00"]["5. volume"])
+
+	// console.log(Object.entries(response));
+
+	// for (const [key, value] of Object.entries(response)){
+	// 	console.log(`Key => ${key} | Value => ${value}`)
+	// }
+
+	// console.log(Object.entries(response));
+	// let test = Object.entries(response).forEach(e => {
+	// 	// let [a,b,c] = response
+	// 	console.log(e)
+	// });
+	
+	// let key = Object.keys(response);
+	// console.log(key)
+	// console.log(key[0]);
+	// console.log(key[1])
+	// let value = Object.values(response[]);
+	// console.log(value[0])
+
+	// console.log("---")
+
+	// console.log(response["Meta Data"]["2. Symbol"]);
+	// let entry = Object.entries(response);
+	// console.log(entry.length)
+
+
+	// let row = entry.length;
+	// for(let i=0; i < row; i++ ){
+	// 	let items = entry[i].length;
+	// 	console.log(i, items);
+	// 	for(let n=0; n < items; n++){
+	// 		console.log(entry[i][n])
+	// 	}
+	// }
+
+	// for (const [key, value] of Object.entries(response)){
+	// 	// console.log(`Key => ${key} | Value => ${value}`)
+	// 	console.log(key);
+	// 	console.log("-----")
+	// 	console.log(value["2021-09-22 16:40:00"]);
+
+	// 	// const [a,b,c] = key;
+	// 	// console.log(c)
+	// }
+
+	<!-- {#each Object.entries(response) as [a, b] }
+		<p>{a}</p>
+		<p>{b}</p>
+	{/each} -->
+
+
+	<!-- {#each info as All }
+	<li>{info}</li>
+	{/each} -->
+	 <!-- {JSON.stringify(JSON.parse(info))} -->
+	
+	<!-- <ul>
+		<li>"1. Information": "Intraday (5min) open, high, low, close prices and volume"</li>
+        <li>"2. Symbol": "IBM"</li>
+        <li>"3. Last Refreshed": "2021-09-22 16:40:00"</li>
+        <li>"4. Interval": "5min"</li>
+        <li>"5. Output Size": "Compact"</li>
+        <li>"6. Time Zone": "US/Eastern"</li>
+	</ul> -->
+
+	<!-- {#await response then StockInfo } 
+	<pre>{JSON.stringify(StockInfo, 'undefined', 2)}</pre>
+	{/await} -->
+
+  
+
+
+	<!-- {#each characterName as hey}
+		<li>{hey["1. Information"]}</li>
+	{/each} -->
+
+	<!-- <h1>Hello </h1>
+	{#await response}
+		<p>Loading...</p>
+	{:then response}
+		{ console.log(response) }
+	{/await} -->
+
+	<!-- <button on:click={ed}>1 Min</button>
+	<button on:click={ed}>5 Min</button>
+	<button on:click={ed}>30 Min</button>
+	<button on:click={ed}>60 Min</button> -->
+	<!-- {#if characterName === undefined}
+	Loading Character Name...
+{:else}
+	{characterName.["Meta Data"]}
+{/if} -->
+
+<!-- <div id="container">
+	<h2>Dailys Scan</h2>
+	<table>
+		<h1>Time Series (5min)</h1>
+	<ul>
+	<b>"2021-09-21 18:15:00" </b>
+	<li>open": "134.5100"</li>
+	<li>high": "134.5100"</li>
+	<li>low": "134.3600"</li>
+	<li>close": "134.5100"</li>
+	<li>volume": "902"</li>
+	<br>
+	<b>"2021-09-21 18:20:00"</b>
+	<li>open": "134.6300"</li>
+	<li>high": "134.6300"</li>
+	<li>low": "134.6300"</li>
+	<li>close": "134.6300"</li>
+	<li>volume": "841"</li>
+	</ul>
+	</table>
+</div> -->
+
+	<!-- <p>Tiket Symbol: {response}</p> -->
+	<!-- {response.map} -->
+<!-- {Object.keys(response)} -->
+	<!-- This show the output but not how we want it. -->
+	<!-- {JSON.stringify(response)} -->
+
+	<!-- {#each Object.entries(testData) as test }
+		<li>{test}</li>
+	{/each} -->
+
+
+	<script lang="ts">
+
+	
+	import { onMount } from "svelte";
+import { each, element } from "svelte/internal";
+	export let logo:string;
+	import Navigation from '../src/components/navigation.svelte';
+	import Register from '../src/components/register.svelte';
+    import Stock from "../src/components/stock.svelte";
+	import Stocks from '../src/components/stock.svelte'
+	// import * as jsonData from "../src/components/data.json";
+
+
+
+
+let ticket:string = "ater".toLocaleUpperCase();
+let dataType:Array<string> = ["json", 'csv' ];
+let outPut:Array<string> = ["compact", "full"];
+let TimesInterval:Array<string> = ["1min", "5min", "15min", "30min", "60min"];
+let FundamentalSeries:Array<string> = ["OVERVIEW", 
+									   "EARNINGS", 
+									   "BALANCE_SHEET", 
+									   "INCOME_STATEMENT", 
+									   "CASH_FLOW"];
+
+let TimeSeries:Array<string> = ["TIME_SERIES_INTRADAY",
+						 		"TIME_SERIES_INTRADAY_EXTENDED", 
+						 		"TIME_SERIES_DAILY", 
+						 		"TIME_SERIES_DAILY_ADJUSTED", 
+						 		"TIME_SERIES_WEEKLY",
+						 		"TIME_SERIES_WEEKLY_ADJUSTED",
+						 		"TIME_SERIES_MONTHLY",
+						 		"TIME_SERIES_MONTHLY_ADJUSTED"];
+
+
+
+
+let High_Low:Array<string> = [
+	"1. open",
+	"2. high",
+	"3. low",
+	"4. close",
+	"5. volume"
+];
+
+
+// let test = [];
+
+// let testData = {
+// 	"Meta Data": {
+//     "1. Information": "Intraday (5min) open, high, low, close prices and volume",
+//     "2. Symbol": "IBM",
+//     "3. Last Refreshed": "2021-09-22 16:40:00",
+//     "4. Interval": "5min",
+//     "5. Output Size": "Compact",
+//     "6. Time Zone": "US/Eastern"
+// },
+// "Time Series (5min)": {
+//     "2021-09-22 16:40:00": {
+//         "1. open": "134.5100",
+//         "2. high": "134.5100",
+//         "3. low": "134.3600",
+//         "4. close": "134.5100",
+//         "5. volume": "902"
+//     },
+//     "2021-09-22 16:20:00": {
+//         "1. open": "134.6300",
+//         "2. high": "134.6300",
+//         "3. low": "134.6300",
+//         "4. close": "134.6300",
+//         "5. volume": "841"
+//     }
+// }
+// }
+
+// const {} = testData;
+						
+
+// console.log(testData)
+let response;
+let info = [];
+onMount(async () => {	
+	// let ticket = prompt("Enter a ticket symbol").toLocaleUpperCase();
+	let ticket = 'tsla';
+	//  response = await fetch(`https://www.alphavantage.co/query?function=${TimeSeries[2]}&outputsize=${outPut[0]}&symbol=${ticket}&interval=${TimesInterval[4]}&apikey=854ZIE26CTNZ5UPX&datatype=${dataType[0]}`)
+     response = await fetch(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${ticket}&apikey=854ZIE26CTNZ5UPX`)
+	.then( response => {
+		if(!response.ok ){
+			throw Error("ERROR!")
+		}
+		return response.json();
+	}).then(data => {
+		// console.log(data)
+		//Information
+		// console.log(data)
+		let Symbol, LastRefreshed;
+		Symbol = data["Meta Data"]['2. Symbol'];
+		LastRefreshed = data["Meta Data"]['3. Last Refreshed'];
+
+		
+		console.log( `Ticket: ${Symbol}  Last Refreshed: ${LastRefreshed}`);
+
+		let StockInfoEntry = data['Time Series (Daily)']["2021-05-12"];
+		StockInfoEntry = Object.entries(StockInfoEntry);
+
+		let StockInfoValue = data['Time Series (Daily)']["2021-05-12"];
+		StockInfoValue = Object.values(StockInfoValue);
+
+		let StockInfoKeys = data['Time Series (Daily)']["2021-05-12"];
+		StockInfoKeys = Object.keys(StockInfoKeys);
+		// console.log(`${StockInfo}`)
+		// console.log(StockInfoEntry)
+		// console.log(StockInfoKeys)
+		// console.log(StockInfoValue)
+		
+
+
+		
+
+
+
+
+
+		for( const property in StockInfoEntry){
+			console.log(`Stock Entrys [${property}] = ${StockInfoEntry[property]}`)
+		}
+		// User [0] = 1. open,602.4900
+		// User [1] = 2. high,620.4100
+		// User [2] = 3. low,586.7650
+		// User [3] = 4. close,589.8900
+		// User [4] = 5. volume,33823646
+
+
+		StockInfoEntry.map(([prop, val]) => console.log(prop, val))
+
+		console.log('----')
+		for(const [prop, val] of StockInfoEntry){
+			console.log(prop, val)
+		}
+	
+		console.log('---')
+
+		console.log([StockInfoValue["1"]])
+		for(let vall of StockInfoValue){
+			console.log(vall)
+		}
+// 		for( const property in data){
+// 			console.log(`User [${property}] = ${data[property]}`)
+// 		}
+
+
+// User [Meta Data] = [object Object]
+// User [Time Series (Daily)] = [object Object]
+		
+
+		// StockInfoEntry.forEach((el, i)=> {
+		// 	console.log(el)
+		// });
+		// console.log(StockInfoKeys, StockInfo)
+		// StockInfoKeys.forEach((keys, index)=>{
+		// 	StockInfo.forEach((val, i) => {
+		// 		console.log(`${keys.slice(0, keys.length)}`)
+		// 	})
+		// });
+
+	
+		// console.log(StockInfo)
+		// StockInfoKeys.forEach((seItems, i)=>{
+		// 	// console.log(`${seItems}`)
+		// 	StockInfo.forEach((items, index) => {
+		// 		console.log(`${seItems} ${items}`);
+		// 	})
+		// })
+
+
+		// StockInfo = Object.entries(StockInfo)
+		// StockInfo.forEach((item, index)=> {
+			// let allInfo = item[1];
+			// console.log(allInfo)
+			// console.log( allInfo, index)
+			// console.log(Object.values(item))
+			// console.log(item)
+			// return JSON.parse(item);
+			// console.log(Object.entries(allInfo))
+			// return allInfo;
+			// return Object.values(item)
+			// console.log(`Stock ticket: ${Symbol}, Last Refreshed: ${LastRefreshed}`)
+			// console.log(Object.values(item)[0])
+			//Display the stock 1.open 2.high 3.low 4.close 5. volume
+			// console.log(Math.round(Object.values(item)[1]["1. open"] - Object.values(item)[1]["4. close"]))
+			// console.log(StockInfo)
+		// })
+		// Math.round
+		//Give the information for this day only
+		// StockInfo = Object.entries(StockInfo["2021-09-27"])
+
+		// give the information of the last 100 days
+		// console.log(Object.entries(StockInfo));
+		// console.log(StockInfo.length);
+		// console.log(StockInfo);
+		// for(let props in StockInfo) {
+		// 	console.log(props[])
+		// }
+
+		// for(i = 0; )
+		// let edgarr = Object.values(StockInfo);
+		
+		// edgarr.splice(0 , edgarr, data);
+		// console.log(edgarr)
+		// console.log(Object.keys(StockInfo))
+		// console.log(Object.values(StockInfo));
+	
+	}).catch(error => {
+		console.log(error);
+	});
+
+	// let test = response.map(meow => {
+	// 	return '<p>Symbol:</p> ' + meow['Meta Data']['2. Symbol']
+	// });
+	// console.log(response)
+	// console.log(test)
+	// response  = response['Meta Data']
+	// console.log(JSON.parse(response))
+	// .then((response) => ([response]))
+	// console.log(response["Meta Data"]["1. Information"])
+	// console.log(response["Meta Data"]["2. Symbol"])
+	// console.log(response["Meta Data"]["3. Last Refreshed"])
+	// console.log(response["Meta Data"]["4. Interval"])
+	// console.log(response["Meta Data"]["5. Output Size"])
+	// console.log(response["Meta Data"]["6. Time Zone"])
+
+	// console.log("--------");
+	// // console.log(response)
+
+	// console.log(response["Time Series (5min)"]["2021-09-21 18:15:00"]["1. open"])
+	// console.log(response["Time Series (5min)"]["2021-09-21 18:40:00"]["2. high"])
+	// console.log(response["Time Series (5min)"]["2021-09-21 18:15:00"]["3. low"])
+	// console.log(response["Time Series (5min)"]["2021-09-21 18:30:00"]["4. close"])
+	// console.log(response["Time Series (5min)"]["2021-09-21 18:25:00"]["5. volume"])
+
+	// console.log(Object.entries(response));
+
+	// for (const [key, value] of Object.entries(response)){
+	// 	console.log(`Key => ${key} | Value => ${value}`)
+	// }
+
+	// console.log(Object.entries(response));
+	// let test = Object.entries(response).forEach(e => {
+	// 	// let [a,b,c] = response
+	// 	console.log(e)
+	// });
+	
+	// let key = Object.keys(response);
+	// console.log(key)
+	// console.log(key[0]);
+	// console.log(key[1])
+	// let value = Object.values(response[]);
+	// console.log(value[0])
+
+	// console.log("---")
+
+	// console.log(response["Meta Data"]["2. Symbol"]);
+	// let entry = Object.entries(response);
+	// console.log(entry.length)
+
+
+	// let row = entry.length;
+	// for(let i=0; i < row; i++ ){
+	// 	let items = entry[i].length;
+	// 	console.log(i, items);
+	// 	for(let n=0; n < items; n++){
+	// 		console.log(entry[i][n])
+	// 	}
+	// }
+
+	// for (const [key, value] of Object.entries(response)){
+	// 	// console.log(`Key => ${key} | Value => ${value}`)
+	// 	console.log(key);
+	// 	console.log("-----")
+	// 	console.log(value["2021-09-22 16:40:00"]);
+
+	// 	// const [a,b,c] = key;
+	// 	// console.log(c)
+	// }
+});
+
+
+
+// function ed () {
+// 	alert(response)
+// };
+
+
+</script>
+<header>
+<Navigation/>
+</header>
+
+<section>
+
+
+	<h1>Meta Data</h1>
+	<!-- {#each Object.entries(response) as [a, b] }
+		<p>{a}</p>
+		<p>{b}</p>
+	{/each} -->
+
+
+	<!-- {#each info as All }
+	<li>{info}</li>
+	{/each} -->
+	 <!-- {JSON.stringify(JSON.parse(info))} -->
+	
+	<!-- <ul>
+		<li>"1. Information": "Intraday (5min) open, high, low, close prices and volume"</li>
+        <li>"2. Symbol": "IBM"</li>
+        <li>"3. Last Refreshed": "2021-09-22 16:40:00"</li>
+        <li>"4. Interval": "5min"</li>
+        <li>"5. Output Size": "Compact"</li>
+        <li>"6. Time Zone": "US/Eastern"</li>
+	</ul> -->
+
+	<!-- {#await response then StockInfo } 
+	<pre>{JSON.stringify(StockInfo, 'undefined', 2)}</pre>
+	{/await} -->
+
+  
+
+
+	<!-- {#each characterName as hey}
+		<li>{hey["1. Information"]}</li>
+	{/each} -->
+
+	<!-- <h1>Hello </h1>
+	{#await response}
+		<p>Loading...</p>
+	{:then response}
+		{ console.log(response) }
+	{/await} -->
+
+	<!-- <button on:click={ed}>1 Min</button>
+	<button on:click={ed}>5 Min</button>
+	<button on:click={ed}>30 Min</button>
+	<button on:click={ed}>60 Min</button> -->
+	<!-- {#if characterName === undefined}
+	Loading Character Name...
+{:else}
+	{characterName.["Meta Data"]}
+{/if} -->
+
+<!-- <div id="container">
+	<h2>Dailys Scan</h2>
+	<table>
+		<h1>Time Series (5min)</h1>
+	<ul>
+	<b>"2021-09-21 18:15:00" </b>
+	<li>open": "134.5100"</li>
+	<li>high": "134.5100"</li>
+	<li>low": "134.3600"</li>
+	<li>close": "134.5100"</li>
+	<li>volume": "902"</li>
+	<br>
+	<b>"2021-09-21 18:20:00"</b>
+	<li>open": "134.6300"</li>
+	<li>high": "134.6300"</li>
+	<li>low": "134.6300"</li>
+	<li>close": "134.6300"</li>
+	<li>volume": "841"</li>
+	</ul>
+	</table>
+</div> -->
+
+	<!-- <p>Tiket Symbol: {response}</p> -->
+	<!-- {response.map} -->
+<!-- {Object.keys(response)} -->
+	<!-- This show the output but not how we want it. -->
+	<!-- {JSON.stringify(response)} -->
+
+	<!-- {#each Object.entries(testData) as test }
+		<li>{test}</li>
+	{/each} -->
+</section>
+
+
+
+<style>
+	ul {
+		list-style-type: none;
+	}
+
+
+	table, li {
+		margin: 0 auto;
+	}
+
+/* 
+	#container {
+		/* display: flex; */
+		/* justify-content: center; */
+		/* flex-direction: row; */
+		/* background: #2f2c3e;
+		height: 500px;
+		width: 30%;
+		position: absolute;
+		top: 0;
+		right: 0;
+		text-align: center;
+		color: white; */
+	/* } */ 
+
+	section {
+		display: flex;
+		flex-direction: column;
+	}
+
+	
+	@media (min-width: 640px) {
+		main {
+			max-width: none;
+			margin: 0;
+			padding: 0;
+		}
+	}
+</style>
+
+
+
+
+1. open 0.6736
+1. open 0.7229
+1. open 0.6679
+1. open 0.6881
+1. open 5936872
+ 
+
+
+
+ 	<!-- {console.log(key, value)} -->
+		<!-- <h2>Stock: ${holderInfo.toLocaleUpperCase()} <br/> Date: {key}</h2>
+		<li>Open: {value['1. open']} / Dif from yesterday: { Math.round(value['1. open'] - value['4. close'])} </li>
+			<li>High: {value['2. high']} / Dif from yesterday: { Math.round(value['2. high'] - value['3. low'])} </li>
+			<li>Low: {value['3. low']} / Dif from yesterday: { Math.round(value['3. low'] - value['4. close'])} </li>
+			<li>Close: {value['4. close']} / Dif from yesterday: { Math.round(value['4. close'] - value['2. high'])} </li>
+			<li>Volume: {value['5. volume']} </li>
+		</ul> -->
+
+
+				<!-- <li>Open: {holder[0][1]['1. open']} <br>Yesterday Open $:${holder[1][1]['1. open']}<br>% Change: {edz(holder[0+i][1]['1. open'], holder[1][1]['1. open'] )}%</li>
+		<li>High: {holder[0][1]['2. high']}  <br>Yesterday High $:${holder[1][1]['2. high']}<br> % Change: {edz(holder[0+i][1]['2. high'], holder[1][1]['2. high'] )}%</li>
+		<li>Low: {holder[0][1]['3. low']}  <br>Yesterday Low $:${holder[1][1]['3. low']}) <br>% Change: {edz(holder[0+i][1]['3. low'], holder[1][1]['3. low'] )}%</li>
+		<li>close: {holder[0][1]['4. close']} <br>Yesterday Close $:${holder[1][1]['4. close']}<br> % Change: {edz(holder[0+i][1]['4. close'], holder[1][1]['4. close'] )}%</li>
+		<li>Volume: {holder[0][1]['5. volume']} <br>Yesterday Volume $:${holder[1][1]['5. volume']}<br> % Change: {edz(holder[0+i][1]['5. volume'], holder[1][1]['5. volume'] )}%</li>
+ -->
+
+ <!-- <li>Open: {holder[0][1]['1. open']} /   yesterdays: {holder[i++][1]['1. open']}</li>
+		<li>High: {holder[0][1]['2. high']}  /  yesterdays: {holder[i++][1]['2. high']}</li>
+		<li>Low: {holder[0][1]['3. low']}  /  yesterdays: {holder[i++][1]['3. low']}</li>
+		<li>Close: {holder[0][1]['4. close']}  /  yesterdays: {holder[i++][1]['4. close']}</li>
+		<li>Volume: {holder[0][1]['5. volume']}  / yesterdays: {holder[i++][1]['5. volume']}</li> -->
+
+		<!-- <li>Open: {holder[i][1]['1. open']} / % Change {holder[i][1]['1. open']} - {holder[i++][1]['1. open']}  </li> -->
+		<!-- {console.log(key)} -->
+
+		<div class="today boxes">
+		<!-- <h2>2021-10-21</h2>
+		<h2>$DIS</h2> -->
+		Today
+	<div class="box">Today Open: ${holder[i][1]['1. open']}</div>
+	<div class="box">Today High: ${holder[i][1]['2. high']}</div>
+	<div class="box">Today Low: ${holder[i][1]['3. low']}</div>
+	<div class="box">Today Close: ${holder[i][1]['4. close']}</div>
+	<div class="box">Today Volume: ${holder[i][1]['5. volume']}</div>
+		</div>
+	<div class="yesterday boxes">
+		Yesterday
+	<div class="box">Yesterday Open: ${holder[i+1][1]['1. open']}</div>
+	<div class="box">Yesterday high: ${holder[i+1][1]['2. high']}</div>
+	<div class="box">Yesterday low: ${holder[i+1][1]['3. low']}</div>
+	<div class="box">Yesterday Close: ${holder[i+1][1]['4. close']}</div>
+	<div class="box">Yesterday Volume: ${holder[i+1][1]['5. volume']}</div>
+	</div>
+	<div class="result boxes">
+	Result
+	<div class="box">Open % Change: {edz( holder[i][1]['1. open'],holder[i+1][1]['1. open'])}%</div>
+	<div class="box">High % Change: {edz( holder[i][1]['2. high'],holder[i+1][1]['2. high'])}%</div>
+	<div class="box">Low % Change: {edz( holder[i][1]['3. low'],holder[i+1][1]['3. low'])}%</div>
+	<div class="box">Close % Change: {edz( holder[i][1]['4. close'],holder[i+1][1]['4. close'])}%</div>
+	<div class="box">Volume % Change: {edz( holder[i][1]['5. volume'],holder[i+1][1]['5. volume'])}%</div>
+	</div>

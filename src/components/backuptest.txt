@@ -1,0 +1,204 @@
+<script lang="ts">
+	export let logo: string;
+	import Navigation from '../src/components/navigation.svelte';
+	import Register from '../src/components/register.svelte';
+</script>
+
+
+<header>
+	<h1>{logo}</h1>
+	<Navigation/>
+</header>
+<main>
+	<!-- <p>Visit the <a href="https://paesobebe.com">Svelte tutorial</a> to learn how to build Svelte apps.</p> -->
+	<Register/>
+</main>
+
+
+<style>
+
+:root {
+	--color1 : #1bb7e8;
+	--color2 : rgb(37 165 197);
+	--color3: 
+}
+/* background: rgb(2,0,36);
+background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(27,183,232,1) 48%, rgba(0,212,255,1) 100%); */
+	
+	header {
+		/* position: fixed; */
+		/* background: rgb(37 165 197); */
+		background: rgb(2,0,36);
+background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(27,183,232,1) 48%, rgba(0,212,255,1) 100%);
+		
+		width: 100%;
+		box-shadow: 0px 5px 20px white;
+		display: flex;
+		justify-content:end;
+		align-items: baseline;
+		/* justify-items:first baseline; */
+		/* flex-direction: row; */
+		height: 120px;
+	}
+
+	h1{
+		/* margin: 0 890px 0 0; */
+		color: white;
+		/* justify-content: end; */
+		font-size: 3.5em;
+	}
+	main {
+		background-image: url("/images/num4.png");
+		background-repeat: no-repeat;
+		background-size: 100%;
+		height: 100vh; 
+	}
+	
+	@media (min-width: 640px) {
+		main {
+			max-width: none;
+			margin: 0;
+			padding: 0;
+		}
+	}
+</style>
+
+
+// register below
+
+<script>
+    function signUp(){
+        console.log('New User Sign up');
+    }
+</script>
+
+<section>
+    <div class="register">
+        <h2>Register</h2>
+    
+    <div class="input-wrap">
+        <input class="webull-input" type="text" placeholder="Phone #" value="">
+    </div>
+
+    <div class="input-wrap">
+        <input class="webull-input" type="password" placeholder="Password" value="">
+    </div>
+
+    <div class="input-wrap">
+        <input class="webull-input" type="tel" placeholder="Verification Code" value="">
+    </div>
+
+
+    <!-- Need to add a event handles function
+        for when user click to add them to database
+        as well and send them a verifiction code to their mobile
+        phone.
+    -->
+    <div class="signup">
+        <span on:click={signUp}>Sign Up</span>
+    </div>
+    
+</div>
+</section>
+
+
+
+<style>
+
+    .signup {
+        display: flex;
+        background: royalblue;
+        padding: 10px;
+        justify-content: center;
+        cursor :pointer;
+    }
+
+    span {
+        font-family: OpenSans-Semibold,PingFangSC-Medium;
+        font-size: 1.4rem;
+        color: #ffffff;
+        text-align: center;
+        /* height: 4rem?; */
+        /* line-height: ?4rem; */
+    }
+
+    h2 {
+        /* color: white; */
+        color: tomato;
+        text-align: center;
+    }
+    section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background: pink; */
+        height: 540px;
+    }
+
+    .register {
+        /* display: flex; */
+        background: #1bb7e8;
+        /* background: white; */
+        width: 25%;
+        /* height: 400px; */
+        /* justify-content: center; */
+        /* padding: 40px 60px; */
+        padding: 80px 88px 80px 87px;
+        border-radius: 4px;
+        border: 1px solid rgba(228, 62, 20, 0.301);
+        box-shadow: 0 21px 26px 0 rgb(113 203 218 / 10%);
+    }
+
+    .register input {
+        width: 100%;
+    }
+
+    .input-wrap {
+        display: flex;
+        flex-direction: column;
+        padding: 6px;
+    }
+
+</style>
+
+
+//navigation below
+<nav>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="#">Map</a></li>
+        <li><a href="#">Register</a></li>
+        <li><a href="#">About</a></li>
+    </ul>
+</nav>
+
+<style>
+
+    nav {
+        /* display: flex; */
+        /* background: tomato; */
+        width: 100%;
+        /* flex-direction: row; */
+        /* justify-content: center; */
+    }
+    ul {
+        list-style-type: none;
+        display: flex;
+
+    }
+
+    li {
+        width: 30%;
+    }
+
+    a:visited,a{text-decoration: none;}
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    a{
+        color: white;
+        font-size: 20px ;
+    }
+</style>
