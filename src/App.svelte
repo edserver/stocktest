@@ -105,9 +105,10 @@
 	{#if error !== null}
 	loading...
 {:else}
+	<div class="today boxes box1">
 {#each holder as  [key, value], i}
 
-	<div class="today boxes box1">
+	
 		<div class="box">Today</div>
 	<div class="box">${holder[i][1]['1. open']}</div>
 	<div class="box">${holder[i][1]['2. high']}</div>
