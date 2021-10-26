@@ -105,35 +105,43 @@
 	{#if error !== null}
 	loading...
 {:else}
-	<div class="today boxes box1">
-{#each holder as  [key, value], i}
-
 	
-		<div class="box">Today</div>
+{#each holder as  [key, value], i}
+<div class="container">
+	
+	<div class="box1">
+		<div class="header">
+			{holderInfo.toLocaleUpperCase()}
+			<br/>
+			{key}
+		</div>
+		
+		<div class="today">
 	<div class="box">${holder[i][1]['1. open']}</div>
 	<div class="box">${holder[i][1]['2. high']}</div>
 	<div class="box">${holder[i][1]['3. low']}</div>
 	<div class="box">${holder[i][1]['4. close']}</div>
 	<div class="box">${holder[i][1]['5. volume']}</div>
 		</div>
+		
+		<div class="result">
 
-	<div class="result boxes box2">
-		<div class="box">Result</div>
-		<div class="box">% Change: {edz( holder[i][1]['1. open'],holder[i+1][1]['1. open'])}%</div>
-		<div class="box">% Change: {edz( holder[i][1]['2. high'],holder[i+1][1]['2. high'])}%</div>
-		<div class="box">% Change: {edz( holder[i][1]['3. low'],holder[i+1][1]['3. low'])}%</div>
-		<div class="box">% Change: {edz( holder[i][1]['4. close'],holder[i+1][1]['4. close'])}%</div>
-		<div class="box">% Change: {edz( holder[i][1]['5. volume'],holder[i+1][1]['5. volume'])}%</div>
-		</div>
+		{edz( holder[i][1]['1. open'],holder[i+1][1]['1. open'])}%</div>
+		{edz( holder[i][1]['2. high'],holder[i+1][1]['2. high'])}%</div>
+		{edz( holder[i][1]['3. low'],holder[i+1][1]['3. low'])}%</div>
+		{edz( holder[i][1]['4. close'],holder[i+1][1]['4. close'])}%</div>
+		{edz( holder[i][1]['5. volume'],holder[i+1][1]['5. volume'])}%</div>
+		
+</div>
 
-	<div class="yesterday boxes box3">
-		<div class="box">Yesterday</div>
-	<div class="box">${holder[i+1][1]['1. open']}</div>
-	<div class="box">${holder[i+1][1]['2. high']}</div>
-	<div class="box">${holder[i+1][1]['3. low']}</div>
-	<div class="box">${holder[i+1][1]['4. close']}</div>
-	<div class="box">${holder[i+1][1]['5. volume']}</div>
+
+	
+	
+		
+		
 	</div>
+
+</div>
 
 	
 
@@ -148,30 +156,77 @@
 
 <style>
 
-	section {
-		display: flex;
-		flex-wrap: wrap;
-	}
+	
+.container {
+
+
+	display: flex;
+	flex-wrap: wrap;
+
+}
+.header,.today,.result {
+	padding: 6px;
+}
+
+.header {
+	box-shadow:inset 0px 0px 15px 3px #23395e;
+	background:linear-gradient(to bottom, #2e466e 5%, #415989 100%);
+	background-color:#2e466e;
+	border-radius:17px;
+	border:1px solid #cccccc;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	padding:6px 13px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #263666;
+	text-align: center;
+	margin-left: 100px;
+}
 
 
 
-	.today, .yesterday, .result {
-		padding: 10px;
-		margin: 30px;
-		display: flex;
-		justify-content: center;
-		flex-direction: column;
-		/* align-items: center; */
-		flex: 1;
-	}
-	.boxes {
-		background: crimson;
-		color: whitesmoke;
-		margin: 10px;
-		padding: 20px;
-		width: 30%;
-		justify-content: stretch;
-	}
+.box1 {
+	width: 18%;
+	/* box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23); */
+	/* background: #c1ff49; */
+	background: white;
+	margin: 10px;
+}
+
+
+.today {
+	box-shadow: 0px 1px 0px 0px #fff6af;
+	background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+	background-color:#ffec64;
+	/* border-radius:6px; */
+	/* border:1px solid #ffaa22; */
+	color:#333333;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffee66;
+	text-align: center;
+}
+
+.result {
+	box-shadow: 0px 10px 14px -7px #276873;
+	background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+	background-color:#599bb3;
+	/* border-radius:8px; */
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:13px 32px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+	text-align: center;
+}
+
 
 
 </style>
