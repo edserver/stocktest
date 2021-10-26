@@ -85,6 +85,10 @@
 		let total = ((decreaseValue / oldNumber) * 100);
 		return (Math.round(total));
 	}
+	
+	let addCommn = function addcomoon(num){
+		return num.toLocaleString("en-US");
+	}
 
 	// console.log(getPorcentageChange(100, 758))
 	// getPorcentageChange(786.6600, 805.0000);
@@ -121,7 +125,7 @@
 	<div>High: ${holder[i][1]['2. high']}</div>
 	<div>Low: ${holder[i][1]['3. low']}</div>
 	<div>Close: ${holder[i][1]['4. close']}</div>
-	<div>Volume: {holder[i][1]['5. volume'].toLocaleString("en-US")}</div>
+	<div>Volume: {addCommn(holder[i][1]['5. volume'])}</div>
 			
 		</div>
 		
