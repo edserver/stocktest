@@ -126,11 +126,11 @@
 		
 		<div class="result">
 
-		{edz( holder[i][1]['1. open'],holder[i+1][1]['1. open'])}%</div>
-		{edz( holder[i][1]['2. high'],holder[i+1][1]['2. high'])}%</div>
-		{edz( holder[i][1]['3. low'],holder[i+1][1]['3. low'])}%</div>
-		{edz( holder[i][1]['4. close'],holder[i+1][1]['4. close'])}%</div>
-		{edz( holder[i][1]['5. volume'],holder[i+1][1]['5. volume'])}%</div>
+		<div>{edz( holder[i][1]['1. open'],holder[i+1][1]['1. open'])}%</div>
+		<div>{edz( holder[i][1]['2. high'],holder[i+1][1]['2. high'])}%</div>
+		<div>{edz( holder[i][1]['3. low'],holder[i+1][1]['3. low'])}%</div>
+		<div>{edz( holder[i][1]['4. close'],holder[i+1][1]['4. close'])}%</div>
+		<div>{edz( holder[i][1]['5. volume'],holder[i+1][1]['5. volume'])}%</div>
 		
 </div>
 
