@@ -6,8 +6,8 @@
 	import {fetchData} from '../src/components/register.svelte';
 
 
-	let ticket  = 'amc';
-	// let ticket = prompt("Search a ticket");
+// 	let ticket  = 'amc';
+	let ticket = prompt("Search a ticket");
 	let url = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${ticket}&apikey=854ZIE26CTNZ5UPX`;
 	// let url = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=tsla&apikey=854ZIE26CTNZ5UPX`;
 	let holder = [];
