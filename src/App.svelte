@@ -86,7 +86,7 @@
 		if (total > 0) {
 			return "+" + Math.round(total);
 		}else {
-			return "-" + Math.round(total);
+			return Math.round(total);
 		}
 	}
 	
