@@ -121,7 +121,8 @@
 	<div>High: ${holder[i][1]['2. high']}</div>
 	<div>Low: ${holder[i][1]['3. low']}</div>
 	<div>Close: ${holder[i][1]['4. close']}</div>
-	<div>Volume: {holder[i][1]['5. volume']}</div>
+	<div>Volume: {holder[i][1]['5. volume'].toLocaleString("en-US")}</div>
+			
 		</div>
 		
 		<div class="result">
@@ -156,7 +157,11 @@
 
 <style>
 
-	
+	section {
+	    display: flex;
+    flex-wrap: wrap;
+}	
+	}
 .container {
 
 
