@@ -87,7 +87,7 @@
 	}
 	
 	let addCommn = function addcomoon(num){
-		return num.toLocaleString("en-US");
+		return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
 	}
 
 	// console.log(getPorcentageChange(100, 758))
