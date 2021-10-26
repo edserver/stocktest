@@ -117,11 +117,11 @@
 		</div>
 		
 		<div class="today">
-	<div class="box">Open: ${holder[i][1]['1. open']}</div>
-	<div class="box">High: ${holder[i][1]['2. high']}</div>
-	<div class="box">Low: ${holder[i][1]['3. low']}</div>
-	<div class="box">Close: ${holder[i][1]['4. close']}</div>
-	<div class="box">Volume: ${holder[i][1]['5. volume']}</div>
+	<div>Open: ${holder[i][1]['1. open']}</div>
+	<div>High: ${holder[i][1]['2. high']}</div>
+	<div>Low: ${holder[i][1]['3. low']}</div>
+	<div>Close: ${holder[i][1]['4. close']}</div>
+	<div>Volume: {holder[i][1]['5. volume']}</div>
 		</div>
 		
 		<div class="result">
