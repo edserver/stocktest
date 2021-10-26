@@ -188,7 +188,8 @@
 
 
 .box1 {
-	width: 30%;
+	display: flex;
+	width: 18%;
 	/* box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23); */
 	/* background: #c1ff49; */
 	background: white;
