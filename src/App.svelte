@@ -4,7 +4,7 @@
 	// export let logo:string;
 	import Navigation from '../src/components/navigation.svelte';
 	import {fetchData} from '../src/components/register.svelte';
-	import {fetchStockData} from '../src/components/fetchStockData.svelte';
+
 
 
 	// let ticket  = 'tsla';
