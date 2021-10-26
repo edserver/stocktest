@@ -83,7 +83,11 @@
 		// newNumber The value the change
 		let decreaseValue = oldNumber - newNumber;
 		let total = ((decreaseValue / oldNumber) * 100);
-		return (Math.round(total));
+		if (total > 0) {
+			return "+" + Math.round(total);
+		}else {
+			return "-" + Math.round(total);
+		}
 	}
 	
 	let addCommn = function addcomoon(num){
