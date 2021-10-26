@@ -181,8 +181,8 @@
 	padding: 6px;
 }
 
-/* .header {
-	box-shadow:inset 0px 0px 15px 3px #23395e;
+.header {
+/*	box-shadow:inset 0px 0px 15px 3px #23395e;
 	background:linear-gradient(to bottom, #2e466e 5%, #415989 100%);
 	background-color:#2e466e;
 	border-radius:17px;
